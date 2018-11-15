@@ -1,4 +1,6 @@
-import { empty } from './helpers';
+import {
+  empty,
+} from './helpers';
 
 export default class List {
   constructor() {

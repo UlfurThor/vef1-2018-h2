@@ -1,7 +1,58 @@
 $max-width: 1200px;
 $gutter: 20px;
 
+
+
+$colBlack: #000;
+$colDarkGrey: #999;
+$colMediumGrey: #aaa;
+$colLightGrey: #ccc;
+$colLightGreen: #2d2;
+$colDarkGreen: #1a1;
+$colYellow: #fcffd2;
+$colPink: #cc9694;
+
+// base font sizes
+$baseSize:16px;
+$s16:16px;
+$s24:24px;
+$s32:32px;
+$s48:48px;
+
+
+$font-main: "Lora",
+"Times New Roman",
+serif;
+$font-heading: "Roboto Mono",
+"Courier New",
+monospace;
+
+
+$transition: 300ms ease-in-out;
+
+
 div {
   // villa-fjarlægðu-mig;
   //stylelint-ætti-að-kvarta;
+}
+
+// row/col config
+
+@mixin row() {
+  display: flex;
+
+  margin-right: -($gutter / 2);
+  margin-left: -($gutter / 2);
+}
+
+@mixin columns($col: 1) {
+  // Multiply by 1% to change col to % value
+  width: ($col / 12 * 100) * 1%;
+
+  padding-right: $gutter / 2;
+  padding-left: $gutter / 2;
+}
+
+@mixin offset-left($cols: 0) {
+  margin-left: ($cols/12 * 100) * 1%;
 }

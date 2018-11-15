@@ -11,17 +11,24 @@
   box-sizing: inherit;
 }
 
-html { /* stylelint-disable-line */
+html {
+  /* stylelint-disable-line */
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: scroll; // alltaf hafa y skrollbar
 
   font-family: $font-main;
+  //font-family: $font-heading;
   font-size: 16px;
 }
 
-img { /* stylelint-disable-line */
+img {
+  /* stylelint-disable-line */
   max-width: 100%;
+}
+
+.c-TODO {
+  display: none;
 }
 
 // TODO import
