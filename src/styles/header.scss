@@ -1,0 +1,32 @@
+@import "config";
+
+.headder__content {
+  border: 1px, solid, black;
+}
+
+header {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  ),url("../../img/header.jpg");
+  background-repeat: no-repeat;
+  background-position: 10px 50%;
+  //background-size: 20px;
+
+  font-family: $font-heading;
+  text-align: center;
+  height: $s48*8;
+  
+
+  .content {
+    padding-top: $s48*3;
+    padding-bottom: $s48*4;
+    &__class {
+      font-size: $s16;
+    }
+
+    &__title {
+      font-size: $s48;
+    }
+  }
+}
