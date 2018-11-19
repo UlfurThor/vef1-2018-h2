@@ -30,6 +30,12 @@ img {
 .c-TODO {
   display: none;
 }
+.buttons{
+  display:flex;
+  justify-content: center;
+  margin-top:$baseSize;
+}
 
 // TODO import
 @import "header";
+@import "button";

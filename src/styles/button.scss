@@ -1,0 +1,13 @@
+@import "config";
+button {
+    justify-content: center;
+    background-color:$colMediumGrey;
+    color:$colBlack;
+    font-size: $gutter;
+    width:7*$s16;
+    height:2.5*$s16;
+    border: none;
+    border-radius:10px;
+    margin-bottom:$baseSize;
+    margin:$baseSize;
+  }
