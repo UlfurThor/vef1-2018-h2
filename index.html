@@ -1,97 +1,101 @@
 <!DOCTYPE html>
 <html lang="is">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hópverkefni 2</title>
-  <link href="https://fonts.googleapis.com/css?family=Lora|Roboto+Mono" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hópverkefni 2</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora|Roboto+Mono" rel="stylesheet">
 
-  <link rel="stylesheet" href="grid.css">
-  <link rel="stylesheet" href="dist/styles.css">
-
-
-</head>
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="dist/styles.css">
 
 
-<body>
-  <header>
-    <div class="content">
-      <h3 class="content__class">VEFFORRITUN</h3>
-      <h1 class="content__title">Fyrirlestrar</h1>
-    </div>
-  </header>
-
-  <main>
-    <div class="c-TODO">
-      Almennt
-      Gögn eru gefin í lectures.json sem sækja skal með ajax virkni. Keyra verður verkefnið með browser-sync til að það
-      virki.
-
-      Efni síðu skal ekki vera breiðara en 1200px. Litir og myndir í haus skulu fylla út í allt lárétt pláss. Yfir
-      myndum er 60% gegnsær hvítur litur. Myndir fyrir hvern fyrirlestur eru skilgreindir í json skrá.
-
-      Grunn leturstærð er 16px og fylgja allar aðrar leturgerðir eftirfarandi skala: 16 24 32 48.
-
-      Litapalletta fyrir vef er #000, #999, #aaa, #ccc, #2d2, #1a1, #fcffd2 og #cc9694.
-
-      Letur fyrir meginmál er Lora, Times New Roman eða serif letur. Letur fyrir fyrirsagnir er Roboto Mono, Courier
-      New eða monospace.
-
-      Flest allt er sett upp í 12 dálka grind með 20px gutter.
-
-      Öll bil eru hálft, heilt, tvöfalt eða þrefalt margfeldi af gutter. Hægt er að nota reglustiku tól (t.d.
-      http://www.arulerforwindows.com/ eða http://www.pascal.com/software/freeruler/) til að finna nákvæmar stærðir en
-      mestu skiptir að lausn svipi til en sé ekki nákvæmlega eins og fyrirmynd.
-
-      Allar hreyfingar gerast á 300ms með ease-in-out hröðunarfalli. Hreyfingar eru þegar svimað er yfir fyrirlestri í
-      lista og síunar tökkum.
-
-      Forsíða
-      Forsíða inniheldur lista af öllum fyrirlestrum. Fram kemur hvort búið sé að klára fyrirlestur eða ekki. Nota skal
-      ✓ til að tákna að fyrirlestri séð lokið, sjá að neðan hvernig virkni er.
-
-      Fyrir ofan lista skulu vera þrír takkar fyrir hvern af flokkunum: HTML, CSS og JavaScript. Í byrjun er engin
-      takki virkur en um leið og takki er virkur skal aðeins sýna fyrirlestra í þeim flokk og takki litaður með #2d2.
-      Ef fleiri takkar eru virkjaðir skal einnig sína þá fyrirlestra. Ef allir takkar eru virkir sést það sama og ef
-      allir eru óvirkir—allir fyrirlestrar.
-
-      Þegar smellt er á fyrirlestur er farið yfir á fyrirlestur.html?slug=<\slug> þar sem <\slug> er slug fyrir
-          fyrirlesturinn, t.d. fyrirlestur.html?slug=html-sagan. Hægt er að nota URLSearchParams og
-          window.location.search til að vita hvaða fyrirlestur átt er við á fyrirlestur.html síðu.
-
-          Fyrirlestur
-          Fyrir hvern fyrirlestur skal birta haus og allt efni fyrirlesturs á eftir honum. Í haus kemur fram flokkur og
-          titill.
-
-          Efni fyrirlesturs er geymt í fylki og skal birta það í sömu röð og það er skilgreint. Útbúa þarf birtingu
-          fyrir hverja einingu eftir útliti.
-
-          Neðst er takki til að merkja fyrirlestur kláraðann og hlekkur til að fara til baka.
-
-          Kláraður fyrirlestur
-          Ef fyrirlestur er merktur kláraður skal sýna ✓ Fyrirlestur kláraður í #2d2. Annars Klára fyrirlestur. Þegar
-          fyrirlestur er kláraður skal vista upplýsingar um það í localStorage og birta í lista og á fyrirlestra síðu.
-
-          Nota skal slug sem auðkenni yfir kláraða fyrirlestra.
-    </div>
-    <button>HTML</button>
-    <button>CSS</button>
-    <button>JavaScript</button>
-    <div class="c-TODO">
-      add select shown lectures by type
-      color button #2d2 ($colLightGreen)
-    </div>
-
-    <div class="lecture-page"></div>
-
-  </main>
+  </head>
 
 
-</body>
+  <body>
+    <header class="header">
+      <div class="protection"></div>
+      <div class="content">
+        <h3 class="content__class">VEFFORRITUN</h3>
+        <h1 class="content__title">Fyrirlestrar</h1>
+      </div>
+    </header>
 
-<script src="src/lib/list.js" type="module"></script> 
-<script src="src/lib/helpers.js" type="module"></script> 
-<script src="src/index.js" type="module"></script> 
+    <main>
+      <div class="c-TODO">
+        Almennt
+        Gögn eru gefin í lectures.json sem sækja skal með ajax virkni. Keyra verður verkefnið með browser-sync til að það
+        virki.
+
+        Efni síðu skal ekki vera breiðara en 1200px. Litir og myndir í haus skulu fylla út í allt lárétt pláss. Yfir
+        myndum er 60% gegnsær hvítur litur. Myndir fyrir hvern fyrirlestur eru skilgreindir í json skrá.
+
+        Grunn leturstærð er 16px og fylgja allar aðrar leturgerðir eftirfarandi skala: 16 24 32 48.
+
+        Litapalletta fyrir vef er #000, #999, #aaa, #ccc, #2d2, #1a1, #fcffd2 og #cc9694.
+
+        Letur fyrir meginmál er Lora, Times New Roman eða serif letur. Letur fyrir fyrirsagnir er Roboto Mono, Courier
+        New eða monospace.
+
+        Flest allt er sett upp í 12 dálka grind með 20px gutter.
+
+        Öll bil eru hálft, heilt, tvöfalt eða þrefalt margfeldi af gutter. Hægt er að nota reglustiku tól (t.d.
+        http://www.arulerforwindows.com/ eða http://www.pascal.com/software/freeruler/) til að finna nákvæmar stærðir en
+        mestu skiptir að lausn svipi til en sé ekki nákvæmlega eins og fyrirmynd.
+
+        Allar hreyfingar gerast á 300ms með ease-in-out hröðunarfalli. Hreyfingar eru þegar svimað er yfir fyrirlestri í
+        lista og síunar tökkum.
+
+        Forsíða
+        Forsíða inniheldur lista af öllum fyrirlestrum. Fram kemur hvort búið sé að klára fyrirlestur eða ekki. Nota skal
+        ✓ til að tákna að fyrirlestri séð lokið, sjá að neðan hvernig virkni er.
+
+        Fyrir ofan lista skulu vera þrír takkar fyrir hvern af flokkunum: HTML, CSS og JavaScript. Í byrjun er engin
+        takki virkur en um leið og takki er virkur skal aðeins sýna fyrirlestra í þeim flokk og takki litaður með #2d2.
+        Ef fleiri takkar eru virkjaðir skal einnig sína þá fyrirlestra. Ef allir takkar eru virkir sést það sama og ef
+        allir eru óvirkir—allir fyrirlestrar.
+
+        Þegar smellt er á fyrirlestur er farið yfir á fyrirlestur.html?slug=<\slug> þar sem <\slug> er slug fyrir
+            fyrirlesturinn, t.d. fyrirlestur.html?slug=html-sagan. Hægt er að nota URLSearchParams og
+            window.location.search til að vita hvaða fyrirlestur átt er við á fyrirlestur.html síðu.
+
+            Fyrirlestur
+            Fyrir hvern fyrirlestur skal birta haus og allt efni fyrirlesturs á eftir honum. Í haus kemur fram flokkur og
+            titill.
+
+            Efni fyrirlesturs er geymt í fylki og skal birta það í sömu röð og það er skilgreint. Útbúa þarf birtingu
+            fyrir hverja einingu eftir útliti.
+
+            Neðst er takki til að merkja fyrirlestur kláraðann og hlekkur til að fara til baka.
+
+            Kláraður fyrirlestur
+            Ef fyrirlestur er merktur kláraður skal sýna ✓ Fyrirlestur kláraður í #2d2. Annars Klára fyrirlestur. Þegar
+            fyrirlestur er kláraður skal vista upplýsingar um það í localStorage og birta í lista og á fyrirlestra síðu.
+
+            Nota skal slug sem auðkenni yfir kláraða fyrirlestra.
+      </div>
+      <div class="buttons">
+        <button>HTML</button>
+        <button>CSS</button>
+        <button>JavaScript</button>
+      </div>
+      <div class="c-TODO">
+        add select shown lectures by type
+        color button #2d2 ($colLightGreen)
+      </div>
+
+      <div class="lecture-page"></div>
+
+    </main>
+
+
+
+  </body>
+
+  <script src="src/lib/list.js" type="module"></script>
+  <script src="src/lib/helpers.js" type="module"></script>
+  <script src="src/index.js" type="module"></script>
 
 </html>
