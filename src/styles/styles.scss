@@ -1,5 +1,7 @@
 @import "config";
-
+@import "header";
+@import "button";
+//á eftir að bæta við fleiru
 * {
   padding: 0;
   margin: 0;
@@ -36,6 +38,32 @@ img {
   margin-top:$baseSize;
 }
 
-// TODO import
-@import "header";
-@import "button";
+.cards {
+  overflow: hidden;
+  max-width:1200px;
+
+  &__row {
+    display: flex;
+    //flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  &__col {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.card{
+  &__title{
+    color:$colBlack;
+    font-weight: 900;
+    font-size:$gutter;
+    //font-family:$font-heading;
+  }
+  &__content{
+    background-color:$colDarkGrey;
+  }
+}

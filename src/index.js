@@ -11,3 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
     list.load();
   }
 });
+
+fetch('../lectures.json');
