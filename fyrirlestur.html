@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hópverkefni 2</title>
     <link href="https://fonts.googleapis.com/css?family=Lora|Roboto+Mono" rel="stylesheet">
-  
+
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="dist/styles.css">
     <script src="dist/bundle.js" type="module"></script>
-  
+
   </head>
 <body class="lecture-page">
-  <header>
+  <header class= "lecture">
       <div class="content">
         <h3 class="content__class">HTML</h3>
         <h1 class="content__title">Sagan</h1>
@@ -54,27 +54,33 @@
           </div>
           <div class="code">
             <p> ### Markdown fyrirsögn..........hér kemur....</p>
-
-            </div>
+          </div>
 
           <h1>HTML5</h1>
           <p class ="lect__text">
             "Eftir áhugaleysi W3C á því að þróa HTML áfam og mikinn fókus á XHTML og XML tengda tækni tóku nokkrir aðilar sig saman og stofnuðu WHATWG (Web Hypertext Application Technology Working Group) árið 2004, með það að markmiði að vinna áfram að HTML og eðlilegri framþróun vefsins. Þessi vinna fór fram undir nafninu HTML5 þar sem hver sem er gat lagt til breytingar á HTML í gegnum póstlista en takmarkaður hópur ritstjóra stýrði því hvað fór inn í staðal.\nTveimur árum seinna, árið 2006, sá W3C að sér og hélt áfram þróun HTML sem HTML 5. En þar sem hver heilvita maður sér að þróun á tveim aðskildum stöðlum (HTML5 og HTML 5) á sama tíma virkar ekki, þá voru þeir blessunarlega sameinaðir í einn HTML5 staðal árið 2007. W3C hætti þróun á XHTML 2.0 árið 2009 og farið var að öllu að þróa HTML5 sem framtíð HTML.\nÁrið 2012 tók W3C „snapshot“ af staðlinum eins og hann leit út hjá WHATWG og fór í þá vinnu að gera staðalinn að W3C staðli. WHATWG hætti hinsvegar að tala sérstaklega um HTML5 og vinnur nú að framþróun HTML í lifandi staðli sem mun aldrei klárast og heldur áfram að þróast án þess að hlutir séu fjarlægðir\nHTML5 byggir hvorki á SGML né XML en er samhæft fyrri útgáfum (backwards compatible) af HTML. Stefnan er að auka samvirkni (interoperability) og aðgengi að vefnum. Til að vera að fullu samhæft fyrri útgáfum þarf HTML5 að skilgreina DocType:"
           </p>
           <div class="code">
-            <p>Hér á að koma doctype................</p>
+          </p>
           </div>
           <h1>Minnsta HTML skjalið</h1>
-          <p class= "data">hér kemur kóðinn.........</p>
-          
-          
+          <p class= "data"> &lt;!doctype html>
+            &lt;html lang=\"is\">\n  &lt;head>\n
+            &lt;meta charset=\"utf-8\">\n
+            &lt;title>Halló heimur&lt;/title>\n
+            &lt;/head>\n
+            &lt;body>\n
+            &lt;p>Halló heimur&lt;/p>\n
+            &lt;/body>\n&lt;/html>"
+
         </div>
         <div class = "done">
-        <p class = "finish">Kára fyrilestur</p>
-        <p class = "back">Til baka</p>
+          <p class = "finish">Kára fyrilestur</p>
+          <p class = "back">Til baka</p>
         </div>
     </div>
   </main>
 
 </body>
 </html>
+replace < by &lt; and > by &gt;
