@@ -2,21 +2,26 @@ import {
   empty,
   el,
   createListFromKey,
-  elClass,
+  readLocalStorage,
+  readLocalStorageBoolean,
+  fetchData,
 } from './helpers';
 import {
   PATH_PAGE_LIST,
   PATH_LIST_LECTURES,
   PATH_PAGE_LECTURE,
 } from './config';
+import HTMLBuilder from './htmlBuilder';
 
 
 export default class List {
   constructor() {
     this.container = document.querySelector('.list');
-    this.enHTML = true;
-    this.enCSS = false;
-    this.enJS = false;
+    this.enHTML = readLocalStorageBoolean('enHTML', true);
+    this.enCSS = readLocalStorageBoolean('enCSS', true);
+    this.enJS = readLocalStorageBoolean('enJS', true);
+
+    this.HTML = new HTMLBuilder();
   }
 
   filterLectures(data) {
@@ -34,49 +39,13 @@ export default class List {
     return filtered;
   }
 
-  cardImage(lecture) {
-    const cardImage = el('div', 'card__image');
-    let cardImg;
-    if (lecture.thumbnail === undefined) {
-      cardImg = el('div', 'card__img');
-      cardImg.classList.add('img_missing');
-    } else {
-      cardImg = el('img', 'card__img');
-      cardImg.src = lecture.thumbnail;
-      cardImg.alt = lecture.title;
-    }
-
-    cardImage.appendChild(cardImg);
-    return cardImage;
-  }
-
-
-  createItem(lecture) {
-    const cardsCol = el(
-      'div', 'cards__col',
-      el(
-        'class', 'card', this.cardImage(lecture),
-        el(
-          'div', 'card__content',
-          el('div', 'card__category', lecture.category.toUpperCase()),
-          el('h2', 'card__title', lecture.title),
-        ),
-      ),
-    );
-    cardsCol.onclick = () => {
-      window.location.href = `${PATH_PAGE_LECTURE}?slug=${lecture.slug}`;
-    };
-
-    return cardsCol;
-  }
-
   showLectures(filtered) {
     console.log(filtered);
-    const cards = elClass('div', 'cards');
-    const cardsRow = elClass('div', 'cards__row');
+    const cards = el('div', 'cards');
+    const cardsRow = el('div', 'cards__row');
 
     for (let m = 0; m < filtered.length; m += 1) {
-      const item = this.createItem(filtered[m]);
+      const item = this.HTML.createCard(filtered[m]);
       cardsRow.appendChild(item);
     }
 
@@ -84,32 +53,19 @@ export default class List {
     this.container.appendChild(cards);
   }
 
-
-  fetchData(path) {
-    return fetch(path)
-      .then((result) => {
-        if (!result.ok) {
-          throw new Error('Non 200 status');
-        }
-        return result.json();
-      })
-      .catch(error => console.error(error));
-  }
-
   load() {
     empty(this.container);
-    this.fetchData('lectures.json')
+    fetchData(PATH_LIST_LECTURES)
       .then((data) => {
-        const d = this.filterLectures(data.lectures);
-        this.showLectures(d);
+        const filtered = this.filterLectures(data.lectures);
+        this.showLectures(filtered);
         this.filterLectures(data);
       }).catch(error => console.error(error));
-
-    // this.container
   }
 
   toggleHTML() {
     this.enHTML = !this.enHTML;
+    localStorage.setItem('enHTML', this.enHTML);
     return this.enHTML;
   }
 
@@ -119,6 +75,7 @@ export default class List {
 
   toggleCSS() {
     this.enCSS = !this.enCSS;
+    localStorage.setItem('enCSS', this.enCSS);
     return this.enCSS;
   }
 
@@ -128,6 +85,7 @@ export default class List {
 
   toggleJS() {
     this.enJS = !this.enJS;
+    localStorage.setItem('enJS', this.enJS);
     return this.enJS;
   }
 
@@ -141,13 +99,13 @@ export default class List {
     button.classList.remove('butt_enabled');
     let enabled = false;
     if (buttID === 'buttID_html') {
-      console.log('html');
+      console.log('html toggle');
       enabled = list.toggleHTML();
     } else if (buttID === 'buttID_css') {
-      console.log('html');
+      console.log('css toggle');
       enabled = list.toggleCSS();
     } else if (buttID === 'buttID_JS') {
-      console.log('html');
+      console.log('js toggle');
       enabled = list.toggleJS();
     }
     if (enabled) {
