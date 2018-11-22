@@ -1,9 +1,14 @@
 import {
   empty,
-  // el,
+  el,
   createListFromKey,
-  elSimple,
+  elClass,
 } from './helpers';
+import {
+  PATH_PAGE_LIST,
+  PATH_LIST_LECTURES,
+  PATH_PAGE_LECTURE,
+} from './config';
 
 
 export default class List {
@@ -29,31 +34,56 @@ export default class List {
     return filtered;
   }
 
-  showLectures(filtered) {
-    for (let m = 0; m < filtered.length; m += 1) {
-      const element = filtered[m];
-      console.log(element);
+  cardImage(lecture) {
+    const cardImage = el('div', 'card__image');
+    let cardImg;
+    if (lecture.thumbnail === undefined) {
+      cardImg = el('div', 'card__img');
+      cardImg.classList.add('img_missing');
+    } else {
+      cardImg = el('img', 'card__img');
+      cardImg.src = lecture.thumbnail;
+      cardImg.alt = lecture.title;
     }
-    const titleList = createListFromKey(filtered, 'title');
-    for (let m = 0; m < titleList.length; m += 1) {
-      console.log(titleList[m]);
 
-      const item = this.createItem(filtered[m]);
-      this.container.appendChild(item);
-    }
+    cardImage.appendChild(cardImg);
+    return cardImage;
   }
+
 
   createItem(lecture) {
-    console.log('createItem: ', lecture);
-    const item = elSimple('div', 'item');
-    const title = elSimple('h3', 'title');
-    title.innerHTML = lecture.title;
-    item.appendChild(title);
-    const category = elSimple('div', 'cat');
-    category.innerHTML = lecture.category;
-    item.appendChild(category);
-    return item;
+    const cardsCol = el(
+      'div', 'cards__col',
+      el(
+        'class', 'card', this.cardImage(lecture),
+        el(
+          'div', 'card__content',
+          el('div', 'card__category', lecture.category.toUpperCase()),
+          el('h2', 'card__title', lecture.title),
+        ),
+      ),
+    );
+    cardsCol.onclick = () => {
+      window.location.href = `${PATH_PAGE_LECTURE}?slug=${lecture.slug}`;
+    };
+
+    return cardsCol;
   }
+
+  showLectures(filtered) {
+    console.log(filtered);
+    const cards = elClass('div', 'cards');
+    const cardsRow = elClass('div', 'cards__row');
+
+    for (let m = 0; m < filtered.length; m += 1) {
+      const item = this.createItem(filtered[m]);
+      cardsRow.appendChild(item);
+    }
+
+    cards.appendChild(cardsRow);
+    this.container.appendChild(cards);
+  }
+
 
   fetchData(path) {
     return fetch(path)

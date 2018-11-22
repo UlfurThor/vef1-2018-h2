@@ -12,11 +12,14 @@ export function empty(element) {
  * create element, and addd children if they exist
  *
  * @param {string} name Element name
+ * @param {string} className Element class
  * @param  {...any} children Child elements
  */
-export function el(name, ...children) {
+export function el(name, className, ...children) {
   const element = document.createElement(name);
-
+  if (className !== undefined) {
+    element.classList.add(className);
+  }
   if (Array.isArray(children)) {
     children.forEach((child) => {
       if (typeof child === 'string') {
@@ -31,7 +34,7 @@ export function el(name, ...children) {
 }
 
 
-export function elSimple(type, className, clickHandler) {
+export function elClass(type, className, clickHandler) {
   const element = document.createElement(type);
   if (className) {
     element.classList.add(className);
