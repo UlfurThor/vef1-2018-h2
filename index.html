@@ -9,14 +9,13 @@
 
   <link rel="stylesheet" href="grid.css">
   <link rel="stylesheet" href="dist/styles.css">
-
+  <script src="dist/bundle.js" type="module"></script>
 
 </head>
 
 
 <body>
-  <header class="header">
-    <div class="protection"></div>
+  <header>
     <div class="content">
       <h3 class="content__class">VEFFORRITUN</h3>
       <h1 class="content__title">Fyrirlestrar</h1>
@@ -25,58 +24,65 @@
 
   <main>
     <div class="buttons">
-      <button>HTML</button>
-      <button>CSS</button>
-      <button>JavaScript</button>
+      <button id="buttID_html" class="">HTML</button>
+      <button id="buttID_css" class="">CSS</button>
+      <button id="buttID_JS" class="">JavaScript</button>
     </div>
     <div class="c-TODO">
       add select shown lectures by type
       color button #2d2 ($colLightGreen)
     </div>
-    <div class="cards">
-      <div class="cards__row">
-        <div class="cards__col">
-          <section class="card">
-            <div class="card__image">
-              <img class="card__img" src= "/img/thumb1.jpg" alt="fyrsti fyrirlestur">
-            </div>
-            <div class="card__content">
-              <div class="card__category">
-                <p>HTML</p>
-              </div>
-              <h2 class="card__title">Sagan</h2>
-              </div>     
-          </section>
-        </div>
-        <div class="cards__col">
-          <section class="card">
+    <div class="list">
+      <div class="cards">
+        <div class="cards__row">
+          <div class="cards__col">
+            <section class="card">
               <div class="card__image">
-                  <img class="card__img" src= "/img/thumb3.jpg" alt="fyrsti fyrirlestur">
+                <img class="card__img" src="/img/thumb1.jpg" alt="fyrsti fyrirlestur">
               </div>
               <div class="card__content">
                 <div class="card__category">
                   <p>HTML</p>
                 </div>
-              <h2 class="card__title">Element</h2>
-              </div>     
-          </section>
-        </div>
-        <div class="cards__col">
-            <section class="card">
-                <div class="card__image">
-                    <img class="card__img" src= "/img/thumb2.jpg" alt="fyrsti fyrirlestur">
-                  </div>
-                <div class="card__content">
-                  <div class="card__category">
-                    <p>HTML</p>
-                  </div>
-                <h2 class="card__title">Aðgengi</h2>
-                </div>     
+                <h2 class="card__title">Sagan</h2>
+              </div>
             </section>
           </div>
-    </div>
+          <div class="cards__col">
+            <section class="card">
+              <div class="card__image">
+                <img class="card__img" src="/img/thumb3.jpg" alt="fyrsti fyrirlestur">
+              </div>
+              <div class="card__content">
+                <div class="card__category">
+                  <p>HTML</p>
+                </div>
+                <h2 class="card__title">Element</h2>
+              </div>
+            </section>
+          </div>
+          <div class="cards__col">
+            <section class="card">
+              <div class="card__image">
+                <img class="card__img" src="/img/thumb2.jpg" alt="fyrsti fyrirlestur">
+              </div>
+              <div class="card__content">
+                <div class="card__category">
+                  <p>HTML</p>
+                </div>
+                <h2 class="card__title">Aðgengi</h2>
+              </div>
+            </section>
+          </div>
+
+        </div>
+      </div>
   </main>
 
+
 </body>
+
+
+
 
 </html>

@@ -116,6 +116,8 @@ Eftirfarandi er sett upp í verkefni:
 
 Setja þarf upp
 
+//TODO-ASK
+
 * `rollup` til að pakka saman JavaScript kóða
 * `babel` til að _transpila_ kóða
 

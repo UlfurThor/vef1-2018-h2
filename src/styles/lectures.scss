@@ -1,0 +1,45 @@
+@import "config";
+.lecture-page{
+    max-width: 1200px;
+}
+.lect{
+    margin:auto;
+    &__content{
+        margin:20px;
+    }
+    &__text{
+        font-size: $baseSize;
+        font-family: $font-main;
+    }
+    &__vid{
+        margin:20px;
+      }
+    &__caption{
+        font-style:italic;
+    }
+}
+.quote{
+    background-color:$colMediumGrey;
+    height: 100px;
+    //align-content: center;
+    font-family: $font-main;
+    margin: 20px 0;
+}
+
+blockquote{
+    padding: 20px;
+}
+.list{
+    margin:20px;
+}
+.code{
+    margin:20px 0;
+}
+.done{
+    justify-content: center;
+    margin:auto;
+}
+
+
+
+
