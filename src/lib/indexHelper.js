@@ -1,9 +1,4 @@
-import List from './lib/list';
-import {
-  initButtons,
-} from './lib/indexHelper';
-/*
-function initButtons(page, list) {
+export function initButtons(page, list) {
   const buttHTML = page.querySelector('#buttID_html');
   // buttHTML.addEventListener('click', list.toggleHTML);
   buttHTML.onclick = (_event) => {
@@ -27,21 +22,9 @@ function initButtons(page, list) {
     buttJS.classList.add('butt_enabled');
   }
 }
-*/
 
-document.addEventListener('DOMContentLoaded', () => {
-  const page = document.querySelector('body');
-  const isLecturePage = page.classList.contains('lecture-page');
-  // console.log(isLecturePage);
-
-  if (isLecturePage) {
-    // fill me
-    console.log('lecturepage');
-  } else {
-    const list = new List();
-
-    initButtons(page, list);
-
-    list.load();
+export function empty(element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
   }
-});
+}
