@@ -74,7 +74,7 @@ export function readLocalStorage(key, initial) {
  */
 export function readLocalStorageBoolean(key, initial) {
   let val;
-  if (key === undefined) {
+  if (initial === undefined) {
     val = readLocalStorage(key, false);
   } else {
     val = readLocalStorage(key, initial);
