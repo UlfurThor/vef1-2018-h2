@@ -59,7 +59,6 @@ export default class List {
       .then((data) => {
         const filtered = this.filterLectures(data.lectures);
         this.showLectures(filtered);
-        this.filterLectures(data);
       }).catch(error => console.error(error));
   }
 
