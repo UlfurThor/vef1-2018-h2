@@ -3,9 +3,13 @@
     max-width: 1200px;
 }
 .lect{
-    margin:auto;
+   // margin:auto;
+    @media(min-width:800px){
+     margin: $columns(3);
+    }
     &__content{
-        margin:20px;
+       // margin:20px;
+
     }
     &__text{
         font-size: $baseSize;
@@ -16,6 +20,9 @@
       }
     &__caption{
         font-style:italic;
+    }
+    &__img{
+      max-width:100%;
     }
 }
 .quote{
@@ -36,8 +43,7 @@ blockquote{
     margin:20px 0;
 }
 .done{
-    justify-content: center;
-    margin:auto;
+    text-align:center;
 }
 
 
