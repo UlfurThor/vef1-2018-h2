@@ -4,8 +4,8 @@
 }
 .lect{
     margin:auto;
-    &__content{
-        margin:20px;
+    @media(min-width:800px){
+      @include columns(8);
     }
     &__text{
         font-size: $baseSize;
@@ -13,6 +13,7 @@
     }
     &__vid{
         margin:20px;
+        text-align:center;
       }
     &__caption{
         font-style:italic;
@@ -21,16 +22,16 @@
 .quote{
     background-color:$colMediumGrey;
     height: 100px;
-    //align-content: center;
     font-family: $font-main;
     margin: 20px 0;
+
 }
 
 blockquote{
-    padding: 20px;
+   padding: 20px;
 }
 .list{
-    margin:20px;
+    margin-top:20px;
 }
 .code{
     margin:20px 0;
@@ -38,7 +39,9 @@ blockquote{
 .done{
     justify-content: center;
     margin:auto;
+    text-align: center;
 }
+
 
 
 

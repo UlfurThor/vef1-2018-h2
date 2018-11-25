@@ -11,7 +11,10 @@ button {
     border-radius:10px;
     margin-bottom:$baseSize;
     margin:$baseSize;
+    cursor: pointer
+
   }
   .butt_enabled{
     background-color:$colLightGreen;
+    cursor: pointer
   }
