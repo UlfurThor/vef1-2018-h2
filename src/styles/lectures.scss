@@ -1,11 +1,10 @@
 @import "config";
-*{
-    max-width: 1200px;
-}
+
 .lect{
     margin:auto;
+   //margin-left:350px;
     @media(min-width:800px){
-      @include columns(8);
+      @include columns(7)
     }
     &__text{
         margin-top:24px;
@@ -43,6 +42,7 @@ blockquote{
     justify-content: center;
     margin:auto;
     text-align: center;
+    cursor: pointer;
 }
 h1{
   font-family: $font-heading;
@@ -52,10 +52,15 @@ iframe{
   height: 100%;
 }
 .youtube{
-  height: 400px;;
+  height: 20vh;
 }
 .txt{
   margin: 24px 0;
+}
+.finished{
+  color:$colLightGreen;
+  //content: '[\2713]';
+  //content:'\2713'; checkmark kemur samt ekki :(
 }
 
 

@@ -14,29 +14,28 @@ header {
   background: url("../../img/header.jpg");
   background-repeat: no-repeat;
   background-position: 10px 50%;
-  //background-size: 20px;
 
   font-family: $font-heading;
   text-align: center;
   height: $s48*8;
-  
+
   .protection{
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    
+
     z-index: 1;
     background-color: rgba(255 ,255, 255, 0.4    );
   }
   .content {
     padding-top: $s48*3;
     padding-bottom: $s48*4;
+
     &__class {
       font-size: $s16;
     }
-
     &__title {
       font-size: $s48;
     }
