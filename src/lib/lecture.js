@@ -1,8 +1,6 @@
 import {
   empty,
   el,
-  createListFromKey,
-  readLocalStorage,
   readLocalStorageBoolean,
   getUrlParameter,
   fetchData,
@@ -10,7 +8,6 @@ import {
 import {
   PATH_PAGE_LIST,
   PATH_LIST_LECTURES,
-  PATH_PAGE_LECTURE,
 } from './config';
 import HTMLBuilder from './htmlBuilder';
 
@@ -41,9 +38,8 @@ export default class Lecture {
 
   finishLectureListner(data, lecture) {
     if (lecture.finished) {
-      console.log('already finished');
+      // do nothing
     } else {
-      console.log('not finished');
       lecture.finishLecture();
     }
   }
@@ -51,21 +47,18 @@ export default class Lecture {
   showPageEnd(data) {
     const end = el('div', 'done');
     let finished;
-    console.log(this.finished);
     if (this.finished) {
       finished = el('p', 'finished', '✓ Fyrirlestur kláraður');
     } else {
       finished = el('p', 'finish', 'Klára fyrilestur');
     }
-    finished.onclick = (_event) => {
-      console.log(_event);
+    finished.onclick = () => {
       this.finishLectureListner(data, this);
     };
     this.finishedDOM = finished;
     end.appendChild(finished);
     const returnHome = el('p', 'back', 'Til baka');
-    returnHome.onclick = (_event) => {
-      console.log(_event);
+    returnHome.onclick = () => {
       window.location.href = PATH_PAGE_LIST;
     };
     end.appendChild(returnHome);
@@ -73,7 +66,6 @@ export default class Lecture {
   }
 
   showLecture(data) {
-    console.log(data);
     const lect = data.content;
     const lectContent = el('div', 'lect__content');
     for (let m = 0; m < lect.length; m += 1) {

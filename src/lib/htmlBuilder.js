@@ -1,14 +1,8 @@
 import {
-  empty,
   el,
-  createListFromKey,
-  readLocalStorage,
   readLocalStorageBoolean,
-  fetchData,
 } from './helpers';
 import {
-  PATH_PAGE_LIST,
-  PATH_LIST_LECTURES,
   PATH_PAGE_LECTURE,
 } from './config';
 

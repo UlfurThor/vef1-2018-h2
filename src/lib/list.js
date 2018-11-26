@@ -1,15 +1,11 @@
 import {
   empty,
   el,
-  createListFromKey,
-  readLocalStorage,
   readLocalStorageBoolean,
   fetchData,
 } from './helpers';
 import {
-  PATH_PAGE_LIST,
   PATH_LIST_LECTURES,
-  PATH_PAGE_LECTURE,
 } from './config';
 import HTMLBuilder from './htmlBuilder';
 
@@ -42,7 +38,6 @@ export default class List {
   }
 
   showLectures(filtered) {
-    console.log(filtered);
     const cards = el('div', 'cards');
     const cardsRow = el('div', 'cards__row');
 
@@ -96,23 +91,18 @@ export default class List {
 
   toggleList(button, list) {
     const buttID = button.id;
-    console.log(button);
     button.classList.remove('butt_enabled');
     let enabled = false;
     if (buttID === 'buttID_html') {
-      console.log('html toggle');
       enabled = list.toggleHTML();
     } else if (buttID === 'buttID_css') {
-      console.log('css toggle');
       enabled = list.toggleCSS();
     } else if (buttID === 'buttID_JS') {
-      console.log('js toggle');
       enabled = list.toggleJS();
     }
     if (enabled) {
       button.classList.add('butt_enabled');
     }
-    console.log('enabled', enabled);
 
     list.load();
   }
