@@ -2,18 +2,15 @@
 @import "header";
 @import "button";
 @import "lectures";
-//á eftir að bæta við fleiru
 * {
   padding: 0;
   margin: 0;
 }
-
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-
 html {
   /* stylelint-disable-line */
   box-sizing: border-box;
@@ -24,12 +21,10 @@ html {
   //font-family: $font-heading;
   font-size: 16px;
 }
-
 img {
   /* stylelint-disable-line */
   max-width: 100%;
 }
-
 .c-TODO {
   display: none;
 }
@@ -38,18 +33,18 @@ img {
   justify-content: center;
   margin-top:$baseSize;
 }
-
 .cards {
+  @media(min-width:800px){
+    @include columns(12);
+  }
   overflow: hidden;
   max-width:1200px;
-
   &__row {
     display: flex;
     //flex-wrap: wrap;
     margin-left: -10px;
     margin-right: -10px;
   }
-
   &__col {
     padding-right: 10px;
     padding-left: 10px;
@@ -67,5 +62,19 @@ img {
   }
   &__content{
     background-color:$colDarkGrey;
+
   }
+}
+.img__missing{
+  width: 100%;
+  height:100%;
+  background-color:$colDarkGrey;
+}
+.card__image{//stýrir stærð gráa kassans
+  height: 3vh;
+}
+
+.card__img{
+  height: 100%;
+  background-color:gray;
 }
