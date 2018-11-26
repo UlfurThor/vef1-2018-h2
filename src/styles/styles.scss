@@ -58,6 +58,7 @@ img {
   }
 }
 .card{
+  cursor: pointer;
   &__title{
     color:$colBlack;
     font-weight: 900;
