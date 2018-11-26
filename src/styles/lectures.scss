@@ -1,51 +1,41 @@
 @import "config";
 
+h1{
+  font-family: $font-heading;
+}
 .lect{
+  max-width:1200px;
     margin:auto;
    //margin-left:350px;
-    @media(min-width:800px){
+    @media(min-width:700px){
       @include columns(7)
     }
     &__text{
         margin-top:24px;
         font-size: $baseSize;
         font-family: $font-main;
+        font-weight: 600;
+
+        margin:20px;
     }
     &__vid{
         margin-top:24px;
         text-align:center;
         height:100%;
+        margin:20px;
       }
     &__caption{
         font-style:italic;
     }
-}
-.quote{
-    background-color:$colMediumGrey;
-    height: 100px;
-    font-family: $font-main;
-    margin: 20px 0;
-}
-blockquote{
-   padding: 20px;
-}
-.list{
-    margin-top:20px;
-  &__item{
-    font-family:$font-main;
-  }
-  }
-.code{
-    margin:20px 0;
-}
-.done{
-    justify-content: center;
-    margin:auto;
-    text-align: center;
-    cursor: pointer;
-}
-h1{
-  font-family: $font-heading;
+    &__content{
+      @media(min-width:700px){
+        margin:10px;
+      }
+    }
+    &__contImg{
+      margin:20px;
+      text-align: center;
+    }
 }
 iframe{
   width:100%;
@@ -54,11 +44,53 @@ iframe{
 .youtube{
   height: 20vh;
 }
+.quote{
+    background-color:$colMediumGrey;
+    height: 100px;
+    font-family: $font-main;
+    @media(min-width: 700px){
+    margin: 20px 0;
+    }
+}
+blockquote{
+   padding: 20px;
+   font-weight: 600;
+}
+cite{
+  margin:20px;
+  font-weight: 600;
+}
+.list{
+    margin:20px;
+    font-weight: 600;
+  &__item{
+    font-family:$font-main;
+  }
+  }
+.code{
+    margin:20px;
+    font-weight: 600;
+}
+.headding{
+  margin:20px;
+}
 .txt{
   margin: 24px 0;
+  font-family:$font-main;
+  font-weight: 600;
+}
+.done{
+  font-weight: 600;
+  justify-content: center;
+  margin:auto;
+  text-align: center;
+  cursor: pointer;
 }
 .finished{
   color:$colLightGreen;
   content:"\2713";
   //display:inline-block;
+}
+.back{
+  margin:20px;
 }
