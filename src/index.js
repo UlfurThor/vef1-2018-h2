@@ -1,12 +1,11 @@
 import List from './lib/list';
 import Lecture from './lib/lecture';
-import {
-  initButtons,
-} from './lib/indexHelper';
+import HTMLBuilder from './lib/htmlBuilder';
 
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
   const isLecturePage = page.classList.contains('lecture-page');
+  const htmlBuilder = new HTMLBuilder();
   // console.log(isLecturePage);
 
   if (isLecturePage) {
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     const list = new List();
 
-    initButtons(page, list);
+    htmlBuilder.initIndexButtons(page, list);
 
     list.load();
   }
