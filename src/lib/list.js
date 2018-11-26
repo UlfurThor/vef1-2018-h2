@@ -34,6 +34,8 @@ export default class List {
         filtered.push(item);
       } else if (item.category === 'javascript' && this.enJS) {
         filtered.push(item);
+      } else if (!this.enCSS && !this.enHTML && !this.enJS) {
+        filtered.push(item);
       }
     }
     return filtered;

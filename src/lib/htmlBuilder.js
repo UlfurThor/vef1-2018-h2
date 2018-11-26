@@ -30,6 +30,11 @@ export default class HTMLBuilder {
   }
 
   createCard(lecture) {
+    const title = el('div', 'card__title_container',
+      el('h2', 'card__title', lecture.title));
+    if (readLocalStorageBoolean(lecture.slug)) {
+      title.appendChild(el('div', 'card__title_finished', '✓'));
+    }
     const cardsCol = el(
       'div', 'cards__col',
       el(
@@ -37,7 +42,7 @@ export default class HTMLBuilder {
         el(
           'div', 'card__content',
           el('div', 'card__category', lecture.category.toUpperCase()),
-          el('h2', 'card__title', lecture.title),
+          title,
         ),
       ),
     );

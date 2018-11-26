@@ -42,6 +42,8 @@ export default class Lecture {
     const lectVid = el('div', 'lect__vid');
     const vid = el('iframe', 'video');
     vid.src = data.data;
+    vid.frameborder = '0';
+    vid.allowfullscreen = '0';
     lectVid.appendChild(vid);
     return lectVid;
   }
