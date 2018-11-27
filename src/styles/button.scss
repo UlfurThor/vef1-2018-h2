@@ -1,19 +1,22 @@
 @import "config";
+
 button {
     justify-content: center;
     background-color:$colLightGrey;
     color:$colBlack;
-    font-size: $gutter;
-    font-weight: 900;
-    width:8*$s16;
-    height:2.5*$s16;
+    font-size: $s24;
+    font-weight: 700;
+    padding-top: $gutter/2;
+    padding-right: $gutter;
+    padding-bottom: $gutter/2;
+    padding-left: $gutter;
     border: none;
     border-radius:10px;
     margin-bottom:$baseSize;
     margin:$baseSize;
     cursor: pointer
-
   }
+
   .butt_enabled{
     background-color:$colLightGreen;
     cursor: pointer;
