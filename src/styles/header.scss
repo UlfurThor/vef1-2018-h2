@@ -1,42 +1,41 @@
 @import "config";
-html{
+
+html {
   font-size: 16px;
 }
-.header__content {
-  border: 1px, solid, black;
-}
-header {
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.2)
-    );
-  background: url("../img/header.jpg");
-  background-repeat: no-repeat;
-  background-position: 10px 50%;
-  background-size: cover;
 
+.header__content {
+  border: 1px, solid, $colBlack;
+}
+
+header {
+  height: $s48*6;
   font-family: $font-heading;
   text-align: center;
-  height: $s48*8;
+  background-image:
+    url("../img/header.jpg"),
+    linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    );
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.protection{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 
-    z-index: 1;
-    background-color: rgba(255 ,255, 255, 0.4    );
-  }
+.protection {
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 .content {
-    padding-top: $s48*3;
-    padding-bottom: $s48*4;
-    &__class {
-      font-size: $s16;
-    }
-    &__title {
-      font-size: $s48;
-    }
+  padding-top: $s48*2;
+  padding-bottom: $s48*3;
+
+  &__class {
+    font-size: $s16;
   }
 
+  &__title {
+    font-size: $s48;
+  }
+}
