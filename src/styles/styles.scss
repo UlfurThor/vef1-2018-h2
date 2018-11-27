@@ -33,6 +33,12 @@ img {
   justify-content: center;
   margin-top:$baseSize;
 }
+
+.list {
+  display: flex;
+  justify-content: center;
+}
+
 .cards {
   display: flex;
 
@@ -67,6 +73,11 @@ img {
    justify-content:flex-end;
    height: 100%;
 
+  &__title_container {
+    display: flex;
+    justify-content: space-between;
+
+  }
 
   &__title{
     color:$colBlack;
