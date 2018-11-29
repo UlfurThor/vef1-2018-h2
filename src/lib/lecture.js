@@ -45,7 +45,7 @@ export default class Lecture {
   }
 
   showPageEnd(data) {
-    const end = el('div', 'done');
+    const end = el('div', 'lect__done');
     let finished;
     if (this.finished) {
       finished = el('p', 'finished', '✔ Fyrirlestur kláraður');
