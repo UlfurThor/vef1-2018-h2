@@ -40,6 +40,11 @@ img {
   margin-top: $baseSize;
 }
 
+.list {
+  display: flex;
+  justify-content: center;
+}
+
 .cards {
   display: flex;
 
@@ -64,9 +69,8 @@ img {
     @media(min-width: 800px) {
       width: 50%;
     }
-
-    @media(min-width:1200px) {
-      width: 33%;
+    @media(min-width:1200px){
+      width: 33.33%;
     }
 
     margin-bottom: 20px;
