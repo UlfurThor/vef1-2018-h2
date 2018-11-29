@@ -1,5 +1,7 @@
 $max-width: 1200px;
 $gutter: 20px;
+$width-base: 500px;
+$width-mid: 700px;
 
 $colBlack: #000;
 $colDarkGrey: #999;
@@ -18,11 +20,11 @@ $s32:32px;
 $s48:48px;
 
 $font-main: "Lora",
-  "Times New Roman",
-  serif;
+"Times New Roman",
+serif;
 $font-heading: "Roboto Mono",
-  "Courier New",
-  monospace;
+"Courier New",
+monospace;
 
 $transition: 300ms ease-in-out;
 
@@ -42,6 +44,16 @@ $transition: 300ms ease-in-out;
   padding-left: $gutter / 2;
 }
 
+@mixin noGutter() {
+  padding-right: -$gutter / 2;
+  padding-left: -$gutter / 2;
+}
+
 @mixin offset-left($cols: 0) {
   margin-left: ($cols/12 * 100) * 1%;
+}
+
+@mixin topBotMargin($scale: 1) {
+  margin-top: $s32 * $scale;
+  margin-bottom: $s32 * $scale;
 }

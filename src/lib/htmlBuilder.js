@@ -157,6 +157,7 @@ export default class HTMLBuilder {
     quote.appendChild(blockquote);
     if (lecture.attribute !== undefined) {
       const cite = el('cite', 'cite', lecture.attribute);
+      blockquote.classList.add('cite_following');
       quote.appendChild(cite);
     }
     return quote;

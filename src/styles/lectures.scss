@@ -1,8 +1,6 @@
 @import "config";
 
 .lecture_main {
-  max-width: 1200px;
-  margin: auto;
 
   @include row;
 
@@ -11,49 +9,35 @@
     padding-left: $gutter;
   }
 
-  .lect_spacer {
-    @include columns(0);
-
-    @media (max-width: 700px) {
-      padding-right: 0;
-      padding-left: 0;
-    }
-
-    @media (min-width: 700px) {
-      @include columns(2);
-    }
-  }
-
 }
 
 .lect {
-  overflow: hidden;
   @include columns(12);
+  padding-right: 0;
+  padding-left: 0;
+  overflow: visible;
 
-  @media (max-width: 700px) {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  @media (min-width: 700px) {
+  @media (min-width: $width-mid) {
     @include columns(8);
+    @include offset-left(2);
+    @include noGutter();
   }
 
   &__content {
-    @media (min-width: 700px) {
+
+    @media (min-width: $width-mid) {
       //margin: 10px;
     }
   }
 
   &__video {
 
+    @include topBotMargin;
     position: relative;
     height: 0;
     padding-top: 25px;
     padding-bottom: 56.25%; //for 16:9 video ratio
     // thank you mister css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
-
-    margin-top: 20px;
 
     .video_frame {
       position: absolute;
@@ -65,88 +49,98 @@
   }
 
   &__text {
-    //margin: 20px;
-    margin-top: 24px;
+    @include topBotMargin;
     font-family: $font-main;
     font-size: $baseSize;
-    font-weight: 600;
 
     .txt {
-      margin: 24px 0;
-      font-family: $font-main;
-      font-weight: 600;
+      @include topBotMargin();
+
     }
   }
 
   &__image {
+    @include topBotMargin;
+
     .img {
-      margin: 20px;
-      text-align: center;
+      width: 100%;
+      height: auto;
     }
 
     .caption {
       font-style: italic;
-
-      .txt {
-        /*//*/
-      }
     }
   }
 
   &__quote {
-    height: 100px;
-    padding: $gutter;
+    @include topBotMargin;
 
+    padding-top: $s16;
+    padding-bottom: $s16;
+    margin-right: -$gutter;
+    margin-left: -$gutter;
     font-family: $font-main;
-    background-color: $colMediumGrey;
+    background-color: $colLightGrey;
 
-    @media (min-width: 700px) {
-      margin: 20px 0;
+    @media (min-width: $width-mid) {
+      //margin: 20px 0;
     }
 
     .blockquote {
-      padding: 20px;
-      font-weight: 600;
+
+      margin-right: $gutter;
+      margin-left: $gutter;
+
+      &.cite_following {
+        padding-bottom: $s16;
+      }
     }
 
     .cite {
-      margin: 20px;
-      font-weight: 600;
+      margin-right: $gutter;
+      margin-left: $gutter;
     }
   }
 
   &__code {
-    margin: 20px;
-    font-weight: 600;
+    @include topBotMargin;
+    font-family: $font-heading;
   }
 
   &__list {
-    margin: 20px;
-    font-weight: 600;
+    @include topBotMargin;
+    font-family: $font-main;
 
     .item {
-      font-family: $font-main;
+      @include topBotMargin(0.5);
     }
   }
 
   &__heading {
-    margin: 20px;
+    @include topBotMargin;
     font-family: $font-heading;
   }
 
   &__done {
-    margin: auto;
-    font-weight: 600;
-    justify-content: center;
+    @include topBotMargin(2);
+    font-family: $font-heading;
     text-align: center;
-    cursor: pointer;
+
+    .finish {
+      @include topBotMargin;
+      cursor: pointer;
+    }
 
     .finished {
+      @include topBotMargin;
       color: $colLightGreen;
+      cursor: pointer;
     }
 
     .back {
+      @include topBotMargin;
       margin: 20px;
+      cursor: pointer;
     }
   }
 
