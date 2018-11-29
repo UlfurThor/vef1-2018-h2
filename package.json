@@ -33,10 +33,6 @@
     "stylelint-config-primer": "^2.2.11"
   },
   "dependencies": {},
-
   "extends": "stylelint-config-standard",
-  "rules": {
-
-  }
-
+  "rules": {}
 }

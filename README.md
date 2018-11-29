@@ -1,37 +1,42 @@
-# Hópverkefni 1 
+# Hópverkefni 2 
 
 ## Hvernig á að keyra/byggja verkefnið 
+
+Til að ná í allt verkefnið og birta það er:
 
 Skref 1: Sækja/installa [node.js](https://nodejs.org/en/) v10.
 
 Skref 2: Sækja verkefnið á [Github](https://github.com/UlfurThor/vef1-2018-h2).
 
-
-
 Skref 3: Opna console í verkefnis möppunni og keyra `npm install` til að setja up node.js föllin.
 
+Skref 4: Keyrið `npm run sass` til að byggja verkefnið (eða `npm run dev` til að byrja Browser-Synch og Sass/lint/rollup hlustarann)
 
-Skref 5: Keyrið `npm run sass` til að byggja verkefnið (eða `npm run dev` til að byrja Browser-Synch og Sass/lint/rollup hlustarann)
+Og þá kemur síðan upp á vefþjóni.
 
-Hægt er að nálgast tilbúið verkefnið í heimasvæði beggja nemenda verkefnisins:  
-notendur.hi.is/~uth16/vefforritun/h2/  
-notendur.hi.is/~hro10/vefforritun/hopverkefni2/
-notendur.hi.is/~rub6/vefforritun/hopverkefni2/
+
+Hægt er að nálgast tilbúið verkefnið í heimasvæði allra nemenda verkefnisins en öll virknin sést ekki án þess að 
+keyrðir séu aukapakkarnir sem er fjallað um hér á undan :  
+notendur.hi.is/~uth16/vefforritun/h2/  <br />
+notendur.hi.is/~hro10/vefforritun/hopverkefni2/<br />
+notendur.hi.is/rub6/Vefforritun/hopverkefni2/
 
 ## Uppsetning
-Verkefnið inniheldur 2 síður, `index`(forsíða) og 
-Verkefnið inniheldur 4 html skjöl, eitt fyrir hverja síðu.  
-Eitt css skal, `styles.css`, sem inniheldur allt `.css` fyrir verkefnið.  
-`styles.css` er bygt eftir `styles.scss` í Sass, sem tekur inn `.scss` skrá fyrir hverja síðu, auk nokkra annara hjálpar skjala.
+Verkefnið inniheldur 14 síður í heildina, `index`(forsíða) og 13 síður með fyrirlestrum
 
+Eitt css skjal, `styles.css`, sem inniheldur allt `.css` fyrir verkefnið.  
+`styles.css` er byggt eftir `styles.scss` í Sass, sem tekur inn `.scss` skrá fyrir forsíðu, fyrilestra síðu, auk nokkra annara hjálpar skjala.<br />
+Einnig er javaSqript (js) skjal `bundle.js`, sem inniheldur allt `.js` fyrir verkefnið. 
+`bundle.js` er ...........
+tekur inn `.js` skrá fyrir uppbyggingu virkni vefsíðurinnar auk hjálpar skjala.<br />
+Mappan sem heldur utan um stóru `css` og `js` skjölin heitir `dist` og skjölin sem safnast inn í þau eru í möppunni `src`<br />
+Einnig er mappa `img`fyrir myndir sem vísað er í 
 ## Nemendur
 Úlfur Þór Þráinsson: uth16@hi.is
 * Java script
-* index
-* products
 
 Hjalti Rúnar Ómarsson : hro10@hi.is
-*Index css
+* Index css
 
 Rut Bjarnadóttir : rub6@hi.is
 * Headder css
