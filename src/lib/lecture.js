@@ -32,7 +32,7 @@ export default class Lecture {
   finishLecture() {
     this.finished = true;
     localStorage.setItem(this.slug, true);
-    this.finishedDOM.innerText = '✓ Fyrirlestur kláraður';
+    this.finishedDOM.innerText = '✔ Fyrirlestur kláraður';
     this.finishedDOM.classList.replace('finish', 'finished');
   }
 
@@ -48,7 +48,7 @@ export default class Lecture {
     const end = el('div', 'done');
     let finished;
     if (this.finished) {
-      finished = el('p', 'finished', '✓ Fyrirlestur kláraður');
+      finished = el('p', 'finished', '✔ Fyrirlestur kláraður');
     } else {
       finished = el('p', 'finish', 'Klára fyrilestur');
     }

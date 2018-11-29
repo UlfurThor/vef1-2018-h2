@@ -36,7 +36,7 @@ export default class HTMLBuilder {
     const title = el('div', 'card__title_container',
       el('h2', 'card__title', lecture.title));
     if (readLocalStorageBoolean(lecture.slug)) {
-      title.appendChild(el('div', 'card__title_finished', '✓'));
+      title.appendChild(el('div', 'card__title_finished', '✔'));
     }
     const cardsCol = el(
       'div', 'cards__col',
