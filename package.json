@@ -12,7 +12,8 @@
     "sass": "node-sass --source-map-embed ./src/styles/styles.scss ./dist/styles.css",
     "sass-watch": "node-sass --source-map-embed --watch --recursive src/styles/styles.scss ./dist/styles.css src/styles/*.scss",
     "test": "concurrently npm:eslint npm:stylelint",
-    "dev": "concurrently npm:sass npm:sass-watch npm:rollup-watch npm:browser-sync"
+    "dev": "concurrently npm:sass npm:sass-watch npm:rollup-watch npm:browser-sync",
+    "build": "sass rollup"
   },
   "keywords": [],
   "author": "",
@@ -31,5 +32,11 @@
     "stylelint": "^9.7.1",
     "stylelint-config-primer": "^2.2.11"
   },
-  "dependencies": {}
+  "dependencies": {},
+
+  "extends": "stylelint-config-standard",
+  "rules": {
+
+  }
+
 }
