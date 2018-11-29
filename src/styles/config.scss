@@ -1,8 +1,6 @@
 $max-width: 1200px;
 $gutter: 20px;
 
-
-
 $colBlack: #000;
 $colDarkGrey: #999;
 $colMediumGrey: #aaa;
@@ -19,7 +17,6 @@ $s24:24px;
 $s32:32px;
 $s48:48px;
 
-
 $font-main: "Lora",
 "Times New Roman",
 serif;
@@ -27,16 +24,7 @@ $font-heading: "Roboto Mono",
 "Courier New",
 monospace;
 
-
 $transition: 300ms ease-in-out;
-
-
-div {
-  // villa-fjarlægðu-mig;
-  //stylelint-ætti-að-kvarta;
-}
-
-// row/col config
 
 @mixin row() {
   display: flex;

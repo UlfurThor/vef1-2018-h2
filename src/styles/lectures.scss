@@ -1,96 +1,114 @@
 @import "config";
 
-h1{
+h1 {
   font-family: $font-heading;
 }
-.lect{
-  max-width:1200px;
-    margin:auto;
-   //margin-left:350px;
-    @media(min-width:700px){
-      @include columns(7)
-    }
-    &__text{
-        margin-top:24px;
-        font-size: $baseSize;
-        font-family: $font-main;
-        font-weight: 600;
 
-        margin:20px;
+.lect {
+  max-width: 1200px;
+  margin: auto;
+  @media (min-width: 700px) {
+    @include columns(7);
+  }
+  @media (max-width: 1500px) {
+    max-width: 1500px;
+  }
+
+  &__text {
+    margin: 20px;
+    margin-top: 24px;
+    font-family: $font-main;
+    font-size: $baseSize;
+    font-weight: 600;
+  }
+
+  &__vid {
+    height: 100%;
+    margin: 20px;
+    margin-top: 24px;
+    text-align: center;
+
+  }
+
+  &__caption {
+    font-style: italic;
+  }
+
+  &__content {
+    @media (min-width: 700px) {
+      margin: 10px;
     }
-    &__vid{
-        margin-top:24px;
-        text-align:center;
-        height:100%;
-        margin:20px;
-      }
-    &__caption{
-        font-style:italic;
-    }
-    &__content{
-      @media(min-width:700px){
-        margin:10px;
-      }
-    }
-    &__contImg{
-      margin:20px;
-      text-align: center;
-    }
+  }
+
+  &__contImg {
+    margin: 20px;
+    text-align: center;
+  }
 }
-iframe{
-  width:100%;
+
+iframe {
+  width: 100%;
   height: 100%;
 }
-.youtube{
+
+.youtube {
   height: 20vh;
 }
-.quote{
-    background-color:$colMediumGrey;
-    height: 100px;
-    font-family: $font-main;
-    @media(min-width: 700px){
+
+.quote {
+  height: 100px;
+  font-family: $font-main;
+  background-color: $colMediumGrey;
+  @media (min-width: 700px) {
     margin: 20px 0;
-    }
+  }
 }
-blockquote{
-   padding: 20px;
-   font-weight: 600;
-}
-cite{
-  margin:20px;
+
+blockquote {
+  padding: 20px;
   font-weight: 600;
 }
-.list{
-    margin:20px;
-    font-weight: 600;
-  &__item{
-    font-family:$font-main;
-  }
-  }
-.code{
-    margin:20px;
-    font-weight: 600;
+cite {
+  margin: 20px;
+  font-weight: 600;
 }
-.headding{
-  margin:20px;
+
+.list {
+  margin: 20px;
+  font-weight: 600;
+
+  &__item {
+    font-family: $font-main;
+  }
 }
-.txt{
+
+.code {
+  margin: 20px;
+  font-weight: 600;
+}
+
+.headding {
+  margin: 20px;
+}
+
+.txt {
   margin: 24px 0;
-  font-family:$font-main;
+  font-family: $font-main;
   font-weight: 600;
 }
-.done{
+
+.done {
+  margin: auto;
   font-weight: 600;
   justify-content: center;
-  margin:auto;
   text-align: center;
   cursor: pointer;
 }
-.finished{
-  color:$colLightGreen;
-  content:"\2713";
-  //display:inline-block;
+
+.finished {
+  color: $colLightGreen;
 }
-.back{
-  margin:20px;
+
+.back {
+  margin: 20px;
 }
