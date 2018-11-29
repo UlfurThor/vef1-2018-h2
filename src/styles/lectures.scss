@@ -7,6 +7,7 @@ h1 {
 .lect {
   max-width: 1200px;
   margin: auto;
+  overflow:hidden;
   @media (min-width: 700px) {
     @include columns(7);
   }
