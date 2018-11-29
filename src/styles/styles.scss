@@ -34,6 +34,11 @@ img {
   margin-top:$baseSize;
 }
 
+.list {
+  display: flex;
+  justify-content: center;
+}
+
 .cards {
   display: flex;
 
@@ -56,7 +61,7 @@ img {
       width: 50%;
     }
     @media(min-width:1200px){
-      width: 33%;
+      width: 33.33%;
     }
     margin-bottom: 20px;
   }
