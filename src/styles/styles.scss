@@ -47,29 +47,26 @@ img {
 
 .cards {
   display: flex;
-
-  overflow: hidden;
   max-width: 1200px;
+  overflow: hidden;
 
   &__row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -10px;
     margin-right: -10px;
+    margin-left: -10px;
   }
 
   &__col {
-    //display: flex;
-    //text-align: column;
+    width: 100%;
     justify-content: flex-end;
     padding-right: 10px;
     padding-left: 10px;
-    width: 100%;
 
-    @media(min-width: 800px) {
+    @media (min-width: 800px) {
       width: 50%;
     }
-    @media(min-width:1200px){
+    @media (min-width: 1200px) {
       width: 33.33%;
     }
 
@@ -78,36 +75,35 @@ img {
 }
 
 .card {
-  cursor: pointer;
   display: flex;
+  height: 100%;
+  cursor: pointer;
   flex-direction: column;
   justify-content: flex-end;
-  height: 100%;
 
   &__title_container {
     display: flex;
     justify-content: space-between;
-
   }
 
   &__title {
-    color: $colBlack;
-    font-weight: 900;
-    font-size: $s32;
+
     font-family: $font-heading;
+    font-size: $s32;
+    font-weight: 900;
+    color: $colBlack;
 
     &_finished {
-      color: $colLightGreen;
       font-size: $s32;
+      color: $colLightGreen;
     }
   }
 
   &__content {
     padding: $gutter/2;
-    background-color: $colLightGrey;
     font-family: $font-heading;
     font-size: $s16;
-
+    background-color: $colLightGrey;
   }
 }
 
@@ -120,8 +116,6 @@ img {
 .card__image {
   height: 100%;
   background-color: $colLightGrey;
-
-
 }
 
 .card__img {
