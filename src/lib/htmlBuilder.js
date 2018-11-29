@@ -103,7 +103,7 @@ export default class HTMLBuilder {
    * @param {*} lecture the lecture in jSon format
    */
   lectVideo(lecture) {
-    const lectVid = el('div', 'lect__vid');
+    const lectVid = el('div', 'lect__video');
     const vid = el('iframe', 'video_frame');
     vid.src = lecture.data;
     vid.frameborder = '0';
@@ -133,13 +133,13 @@ export default class HTMLBuilder {
    * @param {*} lecture the lecture in jSon format
    */
   lectImage(lecture) {
-    const lectContImg = el('div', 'lect__contImg');
-    const img = el('img', 'lect__img');
+    const lectContImg = el('div', 'lect__image');
+    const img = el('img', 'img');
     img.src = lecture.data;
     img.alt = lecture.data;
     lectContImg.appendChild(img);
     if (lecture.caption !== undefined) {
-      const cap = el('div', 'lect__caption',
+      const cap = el('div', 'caption',
         el('p', 'txt', lecture.caption));
       lectContImg.appendChild(cap);
     }
@@ -152,7 +152,7 @@ export default class HTMLBuilder {
    * @param {*} lecture the lecture in jSon format
    */
   lectQuote(lecture) {
-    const quote = el('div', 'quote');
+    const quote = el('div', 'lect__quote');
     const blockquote = el('blockquote', 'blockquote', lecture.data);
     quote.appendChild(blockquote);
     if (lecture.attribute !== undefined) {
@@ -170,7 +170,7 @@ export default class HTMLBuilder {
    * @param {*} lecture the lecture in jSon format
    */
   lectCode(lecture) {
-    const div = el('pre', 'code', lecture.data);
+    const div = el('pre', 'lect__code', lecture.data);
     return div;
   }
 
@@ -180,20 +180,20 @@ export default class HTMLBuilder {
    */
   lectList(lecture) {
     const list = lecture.data;
-    const ul = el('ul', 'lecture_list');
+    const ul = el('ul', 'lect__list');
     for (let m = 0; m < list.length; m += 1) {
-      const li = el('li', 'lecture_list_item', list[m]);
+      const li = el('li', 'item', list[m]);
       ul.appendChild(li);
     }
     return ul;
   }
 
   /**
-   * Creates the dom object for a headding
+   * Creates the dom object for a heading
    * @param {*} lecture the lecture in jSon format
    */
   lectHeadding(lecture) {
-    const div = el('h1', 'headding', lecture.data);
+    const div = el('h1', 'lect__heading', lecture.data);
     return div;
   }
 
@@ -205,7 +205,7 @@ export default class HTMLBuilder {
   showLectureSelect(lecture) {
     switch (lecture.type) {
       case 'youtube':
-        return el('div', 'youtube', this.lectVideo(lecture));
+        return this.lectVideo(lecture);
       case 'text':
         return this.lectText(lecture);
       case 'image':

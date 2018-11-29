@@ -1,117 +1,153 @@
 @import "config";
 
-.lect {
+.lecture_main {
   max-width: 1200px;
   margin: auto;
+
+  @include row;
+
+  @media (max-width: $max-width - 1) {
+    padding-right: $gutter;
+    padding-left: $gutter;
+  }
+
+  .lect_spacer {
+    @include columns(0);
+
+    @media (max-width: 700px) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    @media (min-width: 700px) {
+      @include columns(2);
+    }
+  }
+
+}
+
+.lect {
   overflow: hidden;
+  @include columns(12);
+
+  @media (max-width: 700px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 
   @media (min-width: 700px) {
-    @include columns(7);
-  }
-
-  @media (max-width: 1500px) {
-    max-width: 1500px;
-  }
-
-  &__text {
-    margin: 20px;
-    margin-top: 24px;
-    font-family: $font-main;
-    font-size: $baseSize;
-    font-weight: 600;
-  }
-
-  &__vid {
-    height: 100%;
-    margin: 20px;
-    margin-top: 24px;
-    text-align: center;
-
-  }
-
-  &__caption {
-    font-style: italic;
+    @include columns(8);
   }
 
   &__content {
     @media (min-width: 700px) {
-      margin: 10px;
+      //margin: 10px;
     }
   }
 
-  &__contImg {
-    margin: 20px;
-    text-align: center;
+  &__video {
+
+    position: relative;
+    height: 0;
+    padding-top: 25px;
+    padding-bottom: 56.25%; //for 16:9 video ratio
+    // thank you mister css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+
+    margin-top: 20px;
+
+    .video_frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  .video_frame {
-    width: 100%;
-    height: 100%;
+  &__text {
+    //margin: 20px;
+    margin-top: 24px;
+    font-family: $font-main;
+    font-size: $baseSize;
+    font-weight: 600;
+
+    .txt {
+      margin: 24px 0;
+      font-family: $font-main;
+      font-weight: 600;
+    }
   }
 
-  .youtube {
-    height: 20vh;
+  &__image {
+    .img {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .caption {
+      font-style: italic;
+
+      .txt {
+        /*//*/
+      }
+    }
   }
 
-  .quote {
+  &__quote {
     height: 100px;
+    padding: $gutter;
+
     font-family: $font-main;
     background-color: $colMediumGrey;
 
     @media (min-width: 700px) {
       margin: 20px 0;
     }
+
+    .blockquote {
+      padding: 20px;
+      font-weight: 600;
+    }
+
+    .cite {
+      margin: 20px;
+      font-weight: 600;
+    }
   }
 
-  .blockquote {
-    padding: 20px;
-    font-weight: 600;
-  }
-
-  .cite {
+  &__code {
     margin: 20px;
     font-weight: 600;
   }
 
-  .lecture_list {
+  &__list {
     margin: 20px;
     font-weight: 600;
 
-    &__item {
+    .item {
       font-family: $font-main;
     }
   }
 
-  .code {
-    margin: 20px;
-    font-weight: 600;
-  }
-
-  .headding {
+  &__heading {
     margin: 20px;
     font-family: $font-heading;
   }
 
-  .txt {
-    margin: 24px 0;
-    font-family: $font-main;
-    font-weight: 600;
-  }
-
-  .done {
+  &__done {
     margin: auto;
     font-weight: 600;
     justify-content: center;
     text-align: center;
     cursor: pointer;
-  }
 
-  .finished {
-    color: $colLightGreen;
-  }
+    .finished {
+      color: $colLightGreen;
+    }
 
-  .back {
-    margin: 20px;
+    .back {
+      margin: 20px;
+    }
   }
 
 }
