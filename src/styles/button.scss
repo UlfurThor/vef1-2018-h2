@@ -1,25 +1,25 @@
 @import "config";
 
 button {
-    justify-content: center;
-    background-color:$colLightGrey;
-    color:$colBlack;
-    font-size: $s24;
-    font-weight: 700;
-    padding-top: $gutter/2;
-    padding-right: $gutter;
-    padding-bottom: $gutter/2;
-    padding-left: $gutter;
-    border: none;
-    border-radius:10px;
-    margin-bottom:$baseSize;
-    margin:$baseSize;
-    cursor: pointer
-  }
+  justify-content: center;
+  background-color: $colLightGrey;
+  color: $colBlack;
+  font-size: $s24;
+  font-weight: 700;
+  padding-top: $gutter/2;
+  padding-right: $gutter;
+  padding-bottom: $gutter/2;
+  padding-left: $gutter;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: $baseSize;
+  margin: $baseSize;
+  cursor: pointer
+}
 
-  .butt_enabled{
-    background-color:$colLightGreen;
-    cursor: pointer;
-    transition-timing-function: ease-in-out;
-    transition: 0.3s;
-  }
+.butt_enabled {
+  background-color: $colLightGreen;
+  cursor: pointer;
+  transition-timing-function: ease-in-out;
+  transition: 0.3s;
+}

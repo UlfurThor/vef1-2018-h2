@@ -9,8 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // console.log(isLecturePage);
 
   if (isLecturePage) {
-    // fill me
-    console.log('lecturepage');
     const lecture = new Lecture();
 
     lecture.load();
