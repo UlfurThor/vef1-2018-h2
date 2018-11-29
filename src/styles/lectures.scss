@@ -7,10 +7,12 @@ h1 {
 .lect {
   max-width: 1200px;
   margin: auto;
-  overflow:hidden;
+  overflow: hidden;
+
   @media (min-width: 700px) {
     @include columns(7);
   }
+
   @media (max-width: 1500px) {
     max-width: 1500px;
   }
@@ -47,7 +49,7 @@ h1 {
   }
 }
 
-iframe {
+.video_frame {
   width: 100%;
   height: 100%;
 }
@@ -60,16 +62,18 @@ iframe {
   height: 100px;
   font-family: $font-main;
   background-color: $colMediumGrey;
+
   @media (min-width: 700px) {
     margin: 20px 0;
   }
 }
 
-blockquote {
+.blockquote {
   padding: 20px;
   font-weight: 600;
 }
-cite {
+
+.cite {
   margin: 20px;
   font-weight: 600;
 }
@@ -90,6 +94,7 @@ cite {
 
 .headding {
   margin: 20px;
+  font-family: $font-heading;
 }
 
 .txt {

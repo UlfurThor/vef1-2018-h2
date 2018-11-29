@@ -17,7 +17,7 @@ export default class HTMLBuilder {
     let cardImg;
     if (lecture.thumbnail === undefined) {
       cardImg = el('div', 'card__img');
-      cardImg.classList.add('img_missing');
+      cardImg.classList.add('img__missing');
     } else {
       cardImg = el('img', 'card__img');
       cardImg.src = lecture.thumbnail;
@@ -104,7 +104,7 @@ export default class HTMLBuilder {
    */
   lectVideo(lecture) {
     const lectVid = el('div', 'lect__vid');
-    const vid = el('iframe', 'video');
+    const vid = el('iframe', 'video_frame');
     vid.src = lecture.data;
     vid.frameborder = '0';
     vid.allowfullscreen = '0';

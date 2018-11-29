@@ -1,9 +1,5 @@
 @import "config";
 
-.header__content {
-  border: 1px, solid, $colBlack;
-}
-
 .header {
   height: $s48*6;
   font-family: $font-heading;
@@ -30,6 +26,7 @@
     }
 
     &__title {
+      font-family: $font-heading;
       font-size: $s48;
     }
   }
