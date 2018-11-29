@@ -1,9 +1,5 @@
 @import "config";
 
-h1 {
-  font-family: $font-heading;
-}
-
 .lect {
   max-width: 1200px;
   margin: auto;
@@ -47,74 +43,75 @@ h1 {
     margin: 20px;
     text-align: center;
   }
-}
 
-.video_frame {
-  width: 100%;
-  height: 100%;
-}
-
-.youtube {
-  height: 20vh;
-}
-
-.quote {
-  height: 100px;
-  font-family: $font-main;
-  background-color: $colMediumGrey;
-
-  @media (min-width: 700px) {
-    margin: 20px 0;
+  .video_frame {
+    width: 100%;
+    height: 100%;
   }
-}
 
-.blockquote {
-  padding: 20px;
-  font-weight: 600;
-}
+  .youtube {
+    height: 20vh;
+  }
 
-.cite {
-  margin: 20px;
-  font-weight: 600;
-}
-
-.list {
-  margin: 20px;
-  font-weight: 600;
-
-  &__item {
+  .quote {
+    height: 100px;
     font-family: $font-main;
+    background-color: $colMediumGrey;
+
+    @media (min-width: 700px) {
+      margin: 20px 0;
+    }
   }
-}
 
-.code {
-  margin: 20px;
-  font-weight: 600;
-}
+  .blockquote {
+    padding: 20px;
+    font-weight: 600;
+  }
 
-.headding {
-  margin: 20px;
-  font-family: $font-heading;
-}
+  .cite {
+    margin: 20px;
+    font-weight: 600;
+  }
 
-.txt {
-  margin: 24px 0;
-  font-family: $font-main;
-  font-weight: 600;
-}
+  .lecture_list {
+    margin: 20px;
+    font-weight: 600;
 
-.done {
-  margin: auto;
-  font-weight: 600;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;
-}
+    &__item {
+      font-family: $font-main;
+    }
+  }
 
-.finished {
-  color: $colLightGreen;
-}
+  .code {
+    margin: 20px;
+    font-weight: 600;
+  }
 
-.back {
-  margin: 20px;
+  .headding {
+    margin: 20px;
+    font-family: $font-heading;
+  }
+
+  .txt {
+    margin: 24px 0;
+    font-family: $font-main;
+    font-weight: 600;
+  }
+
+  .done {
+    margin: auto;
+    font-weight: 600;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .finished {
+    color: $colLightGreen;
+  }
+
+  .back {
+    margin: 20px;
+  }
+
 }

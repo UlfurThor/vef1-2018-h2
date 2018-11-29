@@ -180,9 +180,9 @@ export default class HTMLBuilder {
    */
   lectList(lecture) {
     const list = lecture.data;
-    const ul = el('ul', 'list');
+    const ul = el('ul', 'lecture_list');
     for (let m = 0; m < list.length; m += 1) {
-      const li = el('li', 'list_item', list[m]);
+      const li = el('li', 'lecture_list_item', list[m]);
       ul.appendChild(li);
     }
     return ul;
