@@ -3,6 +3,8 @@
 .list {
   display: flex;
   justify-content: center;
+  padding-right: $gutter;
+  padding-left: $gutter;
 
   .card__image {
     height: 100%;
