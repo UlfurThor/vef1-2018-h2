@@ -20,11 +20,11 @@ $s32:32px;
 $s48:48px;
 
 $font-main: "Lora",
-"Times New Roman",
-serif;
+  "Times New Roman",
+  serif;
 $font-heading: "Roboto Mono",
-"Courier New",
-monospace;
+  "Courier New",
+  monospace;
 
 $transition: 300ms ease-in-out;
 
@@ -56,4 +56,11 @@ $transition: 300ms ease-in-out;
 @mixin topBotMargin($scale: 1) {
   margin-top: $s32 * $scale;
   margin-bottom: $s32 * $scale;
+}
+
+@mixin pageJitterFix($scale: 1) {
+  @media (max-width: $max-width+$gutter*$scale) {
+    padding-right: $gutter/$scale;
+    padding-left: $gutter/$scale;
+  }
 }

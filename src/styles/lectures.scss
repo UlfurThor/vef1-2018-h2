@@ -4,7 +4,13 @@
 
   @include row;
 
-  @media (max-width: $max-width - 1) {
+  // A quick dirty fix to reduse the jiteryness when resizing near 1200px
+
+  @include pageJitterFix(3);
+  @include pageJitterFix(2);
+  @include pageJitterFix(0.5);
+
+  @media (max-width: $max-width) {
     padding-right: $gutter;
     padding-left: $gutter;
   }
@@ -20,13 +26,13 @@
   @media (min-width: $width-mid) {
     @include columns(8);
     @include offset-left(2);
-    @include noGutter();
+    padding: 4px;
   }
 
   &__content {
 
     @media (min-width: $width-mid) {
-      //margin: 10px;
+      margin: 0;
     }
   }
 
@@ -81,10 +87,6 @@
     margin-left: -$gutter;
     font-family: $font-main;
     background-color: $colLightGrey;
-
-    @media (min-width: $width-mid) {
-      //margin: 20px 0;
-    }
 
     .blockquote {
 
