@@ -14,12 +14,17 @@ header {
   text-align: center;
   background-image:
     url("../img/header.jpg"),
-    linear-gradient(
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.2)
-    );
+    linear-gradient(rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2));
   background-repeat: no-repeat;
   background-size: cover;
+
+  &.lecture {
+    background-image:
+      url("../img/code.jpg"),
+      linear-gradient(rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2));
+  }
 }
 
 .protection {
