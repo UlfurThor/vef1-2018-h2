@@ -1,25 +1,24 @@
 @import "config";
 
-button {
+.button {
   justify-content: center;
-  background-color: $colLightGrey;
-  color: $colBlack;
-  font-size: $s24;
-  font-weight: 700;
   padding-top: $gutter/2;
   padding-right: $gutter;
   padding-bottom: $gutter/2;
   padding-left: $gutter;
-  border: none;
-  border-radius: 10px;
-  margin-bottom: $baseSize;
   margin: $baseSize;
-  cursor: pointer
+  margin-bottom: $baseSize;
+  font-size: $s24;
+  font-weight: 700;
+  color: $colBlack;
+  cursor: pointer;
+  background-color: $colLightGrey;
+  border: 0;
+  border-radius: 10px;
 }
 
 .butt_enabled {
   background-color: $colLightGreen;
-  cursor: pointer;
-  transition-timing-function: ease-in-out;
   transition: 0.3s;
+  transition-timing-function: ease-in-out;
 }
