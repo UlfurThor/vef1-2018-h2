@@ -10,7 +10,7 @@ Skref 2: Sækja verkefnið á [Github](https://github.com/UlfurThor/vef1-2018-h2
 
 Skref 3: Opna console í verkefnis möppunni og keyra `npm install` til að setja up node.js föllin.
 
-Skref 4: Keyrið `npm run sass` til að byggja verkefnið (eða `npm run dev` til að byrja Browser-Synch og Sass/lint/rollup hlustarann)
+Skref 4: Keyrið `npm run sass` og `npm run rollup` til að byggja verkefnið (eða `npm run dev` til að byrja Browser-Synch og Sass/lint/rollup hlustarann)
 
 Og þá kemur síðan upp á vefþjóni.
 
@@ -27,13 +27,13 @@ Verkefnið inniheldur 14 síður í heildina, `index`(forsíða) og 13 síður m
 Eitt css skjal, `styles.css`, sem inniheldur allt `.css` fyrir verkefnið.  
 `styles.css` er byggt eftir `styles.scss` í Sass, sem tekur inn `.scss` skrá fyrir forsíðu, fyrilestra síðu, auk nokkra annara hjálpar skjala.<br />
 Einnig er javaSqript (js) skjal `bundle.js`, sem inniheldur allt `.js` fyrir verkefnið. 
-`bundle.js` er ...........
-tekur inn `.js` skrá fyrir uppbyggingu virkni vefsíðurinnar auk hjálpar skjala.<br />
+`bundle.js` er bygt af rollup sem tekur inn `.js` skrá fyrir uppbyggingu virkni vefsíðurinnar auk hjálpar skjala.<br />
 Mappan sem heldur utan um stóru `css` og `js` skjölin heitir `dist` og skjölin sem safnast inn í þau eru í möppunni `src`<br />
 Einnig er mappa `img`fyrir myndir sem vísað er í 
 ## Nemendur
 Úlfur Þór Þráinsson: uth16@hi.is
 * Java script
+* scss hjálp
 
 Hjalti Rúnar Ómarsson : hro10@hi.is
 * Index css
