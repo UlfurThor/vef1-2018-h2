@@ -1,3 +1,47 @@
+# Hópverkefni 1 
+
+## Hvernig á að keyra/byggja verkefnið 
+
+Skref 1: Sækja/installa [node.js](https://nodejs.org/en/) v10.
+
+Skref 2: Sækja verkefnið á [Github](https://github.com/UlfurThor/vef1-2018-h2).
+
+
+
+Skref 3: Opna console í verkefnis möppunni og keyra `npm install` til að setja up node.js föllin.
+
+
+Skref 5: Keyrið `npm run sass` til að byggja verkefnið (eða `npm run dev` til að byrja Browser-Synch og Sass/lint/rollup hlustarann)
+
+Hægt er að nálgast tilbúið verkefnið í heimasvæði beggja nemenda verkefnisins:  
+notendur.hi.is/~uth16/vefforritun/h2/  
+notendur.hi.is/~hro10/vefforritun/hopverkefni2/
+notendur.hi.is/~rub6/vefforritun/hopverkefni2/
+
+## Uppsetning
+Verkefnið inniheldur 2 síður, `index`(forsíða) og 
+Verkefnið inniheldur 4 html skjöl, eitt fyrir hverja síðu.  
+Eitt css skal, `styles.css`, sem inniheldur allt `.css` fyrir verkefnið.  
+`styles.css` er bygt eftir `styles.scss` í Sass, sem tekur inn `.scss` skrá fyrir hverja síðu, auk nokkra annara hjálpar skjala.
+
+## Nemendur
+Úlfur Þór Þráinsson: uth16@hi.is
+* Java script
+* index
+* products
+
+Hjalti Rúnar Ómarsson : hro10@hi.is
+*Index css
+
+Rut Bjarnadóttir : rub6@hi.is
+* Headder css
+* Takka css
+* Fyrirlestur css
+
+---
+---
+---
+
 # Hópverkefni 2
 
 Verkefnið felst í því að smíða prótótýpu af fyrirlestravef fyrir vefforritun. Gefin eru gögn sem unnin eru uppúr námsefni vetrarins.
